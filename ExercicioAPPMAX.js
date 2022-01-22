@@ -1,9 +1,10 @@
 class cozinha {
-    constructor(nomeCozinha, horaAbertura, horaFechamento, pratoPrincipal) {
+    constructor(nomeCozinha, horaAbertura, horaFechamento, pratoPrincipal, armazemarIngredientes) {
         this.nomeCozinha = nomeCozinha
         this.horaAbertura = horaAbertura
         this.horaFechamento = horaFechamento
         this.pratoPrincipal = pratoPrincipal
+        this.armazemarIngredientes = (funcaoIngrediente)
     }
     anunciarNomeCozinha() {
         console.log(`Nome: ${this.nomeCozinha}`)
@@ -17,75 +18,104 @@ class cozinha {
     anunciarPratoPrincipal() {
         console.log(`Prato Principal: ${this.pratoPrincipal}`)
     }
+    addArmazenarIngredientes(array) {
+        this.armazemarIngredientes.push()
+    }
+    anunciarArmazenarIngredientes() {
+        //console.log(this.armazemarIngredientes)
+        console.log(`Quantidade de ingredientes: ${this.armazemarIngredientes.length}`)
+    }
+
 }
 
 class ingrediente {
-    constructor(nomeIngrediente, DataValidade) {
+    constructor(nomeIngrediente, dataValidade) {
         this.nomeIngrediente = nomeIngrediente
-        this.DataValidade = DataValidade
+        this.dataValidade = dataValidade
     }
     anunciarNomeIngrediente() {
         console.log(`Nome: ${this.nomeIngrediente}`)
     }
     anunciarDataValidade() {
-        console.log(`Data de validade: ${this.DataValidade}`)
+        console.log(`Data de validade: ${this.dataValidade}`)
     }
 }
 
+//let arrayIngredientes = ['Feijão', 'Farinha', 'Arroz', 'Carne de Porco', 'Linguiça']
+
 {
-    const cozinha1 = new cozinha('Cozinha mineira', 14, 20, 'Feijoada')
+    cozinha1 = new cozinha('Cozinha mineira', 14, 20, 'Feijoada', (funcaoIngrediente = ['Feijão', 'Farinha', 'Arroz', 'Carne de Porco', 'Linguiça']))
     cozinha1.anunciarNomeCozinha()
     cozinha1.anunciarHoraAbertura()
     cozinha1.anunciarHoraFechamento()
     cozinha1.anunciarPratoPrincipal()
+    cozinha1.addArmazenarIngredientes()
+    cozinha1.anunciarArmazenarIngredientes()
 
+//    console.log('Número de ingredientes: ' + arrayIngredientes.length)
+    
     console.log("\nLista de ingredientes:")
 
-    const ingrediente1 = new ingrediente('Feijão', '30/04/2022')
-    ingrediente1.anunciarNomeIngrediente()
-    ingrediente1.anunciarDataValidade()
+    var data1a = new Date(2022, 04, 30)
+    const ingrediente1a = new ingrediente('Feijão', data1a)
+    ingrediente1a.anunciarNomeIngrediente()
+    ingrediente1a.anunciarDataValidade()
     
-    const ingrediente2 = new ingrediente('Farinha', '05/05/2022')
-    ingrediente2.anunciarNomeIngrediente()
-    ingrediente2.anunciarDataValidade()
+    var data2a = new Date(2022, 05, 04)
+    const ingrediente2a = new ingrediente('Farinha', data2a)
+    ingrediente2a.anunciarNomeIngrediente()
+    ingrediente2a.anunciarDataValidade()
     
-    const ingrediente3 = new ingrediente('Arroz', '27/04/2022')
-    ingrediente3.anunciarNomeIngrediente()
-    ingrediente3.anunciarDataValidade()
+    var data3a = new Date(2022, 04, 27)
+    const ingrediente3a = new ingrediente('Arroz', data3a)
+    ingrediente3a.anunciarNomeIngrediente()
+    ingrediente3a.anunciarDataValidade()
     
-    const ingrediente4 = new ingrediente('Carne de Porco', '15/03/2022')
-    ingrediente4.anunciarNomeIngrediente()
-    ingrediente4.anunciarDataValidade()
-
-    const ingrediente5 = new ingrediente('Linguiça', '03/04/2022')
-    ingrediente5.anunciarNomeIngrediente()
-    ingrediente5.anunciarDataValidade()
+    var data4a = new Date(2022, 03, 15)
+    const ingrediente4a = new ingrediente('Carne de Porco', data4a)
+    ingrediente4a.anunciarNomeIngrediente()
+    ingrediente4a.anunciarDataValidade()
+    
+    var data5a = new Date(2022, 04, 03)
+    const ingrediente5a = new ingrediente('Linguiça', data5a)
+    ingrediente5a.anunciarNomeIngrediente()
+    ingrediente5a.anunciarDataValidade()
 }
 
 console.log("\n")
 
+//let arrayIngredientes2 = ['Champignon', 'Brócolis', 'Macarrão', 'Carne']
+
 {
-    const cozinha1 = new cozinha('Cozinha chinesa', 10, 23, 'Yakissoba')
-    cozinha1.anunciarNomeCozinha()
-    cozinha1.anunciarHoraAbertura()
-    cozinha1.anunciarHoraFechamento()
-    cozinha1.anunciarPratoPrincipal()
+    const cozinha2 = new cozinha('Cozinha chinesa', 10, 23, 'Yakissoba', (funcaoIngrediente = ['Champignon', 'Brócolis', 'Macarrão', 'Carne']))
+    cozinha2.anunciarNomeCozinha()
+    cozinha2.anunciarHoraAbertura()
+    cozinha2.anunciarHoraFechamento()
+    cozinha2.anunciarPratoPrincipal()
+    cozinha2.addArmazenarIngredientes()
+    cozinha2.anunciarArmazenarIngredientes()
 
+    //console.log('Número de ingredientes: ' + arrayIngredientes2.length)
+    
     console.log("\nLista de ingredientes:")
+    
+    var data1b = new Date(2022, 02, 27)
+    const ingrediente1b = new ingrediente('Champignon,', data1b)
+    ingrediente1b.anunciarNomeIngrediente()
+    ingrediente1b.anunciarDataValidade()
+    
+    var data2b = new Date(2022, 01, 25)
+    const ingrediente2b = new ingrediente('Brócolis,', data2b)
+    ingrediente2b.anunciarNomeIngrediente()
+    ingrediente2b.anunciarDataValidade()
 
-    const ingrediente1 = new ingrediente('Champignon,', '27/02/2022')
-    ingrediente1.anunciarNomeIngrediente()
-    ingrediente1.anunciarDataValidade()
-    
-    const ingrediente2 = new ingrediente('Brócolis,', '25/01/2022')
-    ingrediente2.anunciarNomeIngrediente()
-    ingrediente2.anunciarDataValidade()
-    
-    const ingrediente3 = new ingrediente('Macarrão', '25/04/2022')
-    ingrediente3.anunciarNomeIngrediente()
-    ingrediente3.anunciarDataValidade()
-    
-    const ingrediente4 = new ingrediente('Carne', '17/03/2022')
-    ingrediente4.anunciarNomeIngrediente()
-    ingrediente4.anunciarDataValidade()
-}
+    var data3b = new Date(2022, 04, 25)
+    const ingrediente3b = new ingrediente('Macarrão', data3b)
+    ingrediente3b.anunciarNomeIngrediente()
+    ingrediente3b.anunciarDataValidade()
+
+    var data4b = new Date(2022, 03, 17)
+    const ingrediente4b = new ingrediente('Carne', data4b)
+    ingrediente4b.anunciarNomeIngrediente()
+    ingrediente4b.anunciarDataValidade()
+} 
