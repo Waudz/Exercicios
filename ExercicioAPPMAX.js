@@ -41,8 +41,6 @@ class ingrediente {
     }
 }
 
-//let arrayIngredientes = ['Feijão', 'Farinha', 'Arroz', 'Carne de Porco', 'Linguiça']
-
 {
     cozinha1 = new cozinha('Cozinha mineira', 14, 20, 'Feijoada', (funcaoIngrediente = ['Feijão', 'Farinha', 'Arroz', 'Carne de Porco', 'Linguiça']))
     cozinha1.anunciarNomeCozinha()
@@ -51,8 +49,6 @@ class ingrediente {
     cozinha1.anunciarPratoPrincipal()
     cozinha1.addArmazenarIngredientes()
     cozinha1.anunciarArmazenarIngredientes()
-
-//    console.log('Número de ingredientes: ' + arrayIngredientes.length)
     
     console.log("\nLista de ingredientes:")
 
@@ -84,8 +80,6 @@ class ingrediente {
 
 console.log("\n")
 
-//let arrayIngredientes2 = ['Champignon', 'Brócolis', 'Macarrão', 'Carne']
-
 {
     const cozinha2 = new cozinha('Cozinha chinesa', 10, 23, 'Yakissoba', (funcaoIngrediente = ['Champignon', 'Brócolis', 'Macarrão', 'Carne']))
     cozinha2.anunciarNomeCozinha()
@@ -94,8 +88,6 @@ console.log("\n")
     cozinha2.anunciarPratoPrincipal()
     cozinha2.addArmazenarIngredientes()
     cozinha2.anunciarArmazenarIngredientes()
-
-    //console.log('Número de ingredientes: ' + arrayIngredientes2.length)
     
     console.log("\nLista de ingredientes:")
     
